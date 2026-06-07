@@ -3,7 +3,7 @@ package com.vaibhao.fitness.activityservice;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = ActivityserviceApplication.class)
 class ActivityserviceApplicationTests {
 
 	@Test
