@@ -11,7 +11,11 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "recommendations")
+@Table(name = "recommendations", indexes = {
+    // ⚡ Bolt: Adding indexes for frequently queried fields to improve read performance
+    @Index(name = "idx_activity_id", columnList = "activityId"),
+    @Index(name = "idx_user_id", columnList = "userId")
+})
 @Builder
 public class RecommendationModel {
     @Id
